@@ -63,3 +63,42 @@ function reset() {
   document.getElementById("date").value = "yyyy-MM-dd";
   document.getElementById("cv").value = "";
 }
+
+let date = new Date();
+
+let d = date.getDate();
+let m = date.getMonth() + 1;
+let y = date.getFullYear();
+
+d = d < 10 ? "0" + d : d;
+m = m < 10 ? "0" + m : m;
+
+document.getElementsByTagName("h5")[0].innerHTML = `${d} : ${m} : ${y}`;
+
+function clock() {
+  let date = new Date();
+  let hr = date.getHours();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  var session = "AM";
+
+  if (hr >= 12) {
+    session = "PM";
+  }
+
+  if (hr > 12) {
+    hr = hr - 12;
+  }
+
+  if (hr == 0) {
+    hr = 12;
+  }
+
+  hr = hr < 10 ? "0" + hr : hr;
+  min = min < 10 ? "0" + min : min;
+  sec = sec < 10 ? "0" + sec : sec;
+
+  document.getElementsByTagName("h5")[1].innerHTML =
+    `${hr} : ${min} : ${sec} : ${session}`;
+}
+setInterval(clock, 1000);
