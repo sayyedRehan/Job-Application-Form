@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Job Application Form</title>
+  </head>
+  <body>
+    <div class="form-page">
+      <h1 style="text-align: center">
+        Job Application Form <span style="font-size: 1.3rem">(Web)</span>
+      </h1>
+
+      <div class="form-container">
+        <div class="form-control div1">
+          <label>First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            placeholder="Enter your First Name"
+          />
+        </div>
+
+        <div class="form-control div2">
+          <label>Last Name:</label>
+          <input type="text" id="lastName" placeholder="Enter your Last Name" />
+        </div>
+
+        <div class="form-control div3">
+          <label for="email">Enter Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email account"
+          />
+        </div>
+
+        <div class="form-control div4">
+          <label>Select Job:</label>
+          <select name="jobRole" id="jobRole">
+            <option value="">Select</option>
+            <option value="frontend-developer">Frontend Developer</option>
+            <option value="backend-developer">Backend Developer</option>
+            <option value="full-stack">Full Stack Developer</option>
+            <option value="ui-ux">UI-UX Designer</option>
+          </select>
+        </div>
+
+        <div class="form-control div5">
+          <label>Address:</label>
+          <textarea id="address" placeholder="Enter"></textarea>
+        </div>
+
+        <div class="form-control div6">
+          <label>City Name:</label>
+          <input type="text" id="cityName" placeholder="Enter your City Name" />
+        </div>
+
+        <div class="form-control div7">
+          <label>Pin Code:</label>
+          <input type="number" id="pinCode" placeholder="Enter Pin Code" />
+        </div>
+
+        <div class="form-control div8">
+          <label>Start Date:</label>
+          <input value="0000-00-00" type="date" id="date" name="date" />
+        </div>
+
+        <div class="form-control div9">
+          <label>Upload Your CV:</label>
+          <input type="file" id="cv" name="cv" />
+        </div>
+      </div>
+
+      <div class="button-section">
+        <button class="submit" onclick="submits()">Submit</button>
+        <button class="close" onclick="closes()">Close</button>
+        <button class="reset" onclick="reset()">Reset</button>
+      </div>
+      <hr />
+      <!-- </form> -->
+      <center>
+        <table id="table" align="center">
+          <tr>
+            <th colspan="12" id="head"></th>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+          </tr>
+        </table>
+      </center>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
