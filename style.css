@@ -7,10 +7,12 @@
 }
 body {
   width: 100%;
+
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   background-color: #088178;
+  position: relative;
 }
 .form-page {
   max-width: 600px;
@@ -91,6 +93,31 @@ body {
   justify-content: center;
   gap: 2rem;
 }
+.btns {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+}
+.dark,
+.light {
+  height: 32px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-out 10ms;
+}
+.dark:hover,
+.light:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(160, 244, 160),
+    rgb(204, 199, 199)
+  );
+  border: 1px solid #09f330;
+
+  box-shadow: 4px 3px 6px rgb(36, 35, 35);
+}
 label {
   font-size: 1rem;
   font-weight: 800;
@@ -123,6 +150,7 @@ label {
   border: none;
   outline-style: none;
   border-radius: 3px;
+
   transition: all 400ms 10ms ease-out;
 }
 #lastName:hover {
@@ -291,6 +319,7 @@ label {
   border-bottom-left-radius: 5px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
+  cursor: pointer;
   transition: all 400ms ease-out 10ms;
 }
 .submit a {
@@ -314,6 +343,7 @@ label {
   width: 100px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
   transition: all 400ms ease-out 10ms;
 }
 .close:hover {
@@ -336,6 +366,7 @@ label {
   border-bottom-left-radius: 2px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
   transition: all 400ms ease-out 10ms;
 }
 .reset:hover {

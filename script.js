@@ -64,16 +64,19 @@ function reset() {
   document.getElementById("cv").value = "";
 }
 
-let date = new Date();
+function date() {
+  let date = new Date();
 
-let d = date.getDate();
-let m = date.getMonth() + 1;
-let y = date.getFullYear();
+  let d = date.getDate();
+  let m = date.getMonth() + 1;
+  let y = date.getFullYear();
 
-d = d < 10 ? "0" + d : d;
-m = m < 10 ? "0" + m : m;
+  d = d < 10 ? "0" + d : d;
+  m = m < 10 ? "0" + m : m;
 
-document.getElementsByTagName("h5")[0].innerHTML = `${d} : ${m} : ${y}`;
+  document.getElementsByTagName("h5")[0].innerHTML = `${d} : ${m} : ${y}`;
+}
+date();
 
 function clock() {
   let date = new Date();
@@ -102,3 +105,19 @@ function clock() {
     `${hr} : ${min} : ${sec} : ${session}`;
 }
 setInterval(clock, 1000);
+
+let dark = false;
+
+function darkMode() {
+  var body = document.body;
+  var formpage = document.getElementsByClassName("form-page")[0];
+  console.log(formpage);
+  if (dark == false) {
+    body.style.transition = "1s";
+    body.style.backgroundColor = "#000";
+    dark = true;
+  } else {
+    body.style.backgroundColor = "#088178";
+    dark = false;
+  }
+}
